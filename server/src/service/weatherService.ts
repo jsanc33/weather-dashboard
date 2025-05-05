@@ -1,9 +1,45 @@
+//import dayjs from 'dayjs';
+import dayjs, { type Dayjs } from 'dayjs';
 import dotenv from 'dotenv';
 dotenv.config();
 
-// TODO: Define an interface for the Coordinates object
+//an interface for the Coordinates object
+interface Coordinates {
+  name: string;
+  lat: number;
+  lon: number;
+  country: string;
+  state: string;
+}
 
-// TODO: Define a class for the Weather object
+//class for the Weather object
+class Weather {
+  city: string;
+  date: Dayjs | string;
+  tempF: number;
+  windSpeed: number;
+  humidity: number;
+  icon: string;
+  iconDescription: string;
+  constructor(
+    city: string,
+    date: Dayjs | string,
+    tempF: number,
+    windSpeed: number,
+    humidity: number,
+    icon: string,
+    iconDescription: string
+  ) {
+    this.city = city;
+    this.date = date;
+    this.tempF = tempF;
+    this.windSpeed = windSpeed;
+    this.humidity = humidity;
+    this.icon = icon;
+    this.iconDescription = iconDescription;
+  }
+}
+
 
 // TODO: Complete the WeatherService class
 class WeatherService {

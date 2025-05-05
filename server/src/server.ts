@@ -14,7 +14,7 @@ app.use(express.static('../client/dist'));
 //Implement middleware for parsing JSON and urlencoded form data
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-// TODO: Implement middleware to connect the routes
+//Implement middleware to connect the routes
 app.use(routes);
 
 // Start the server on the port
