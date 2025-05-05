@@ -1,3 +1,5 @@
+//import uuid package from 'uuid';
+import { v4 as uuidv4 } from 'uuid';
 import fs from 'node:fs/promises';
 //Define a City class with name and id properties
 class City {
